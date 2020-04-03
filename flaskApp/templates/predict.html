@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="content-section">
+    <form method="POST" action="">
+      <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Predict Stock Price</legend>
+        <div class="form-group">
+          {{form.csrf_token}}
+          {{form.stockTicker.label}}
+          {{form.stockTicker}}<br>
+          {{form.daysToPredict.label}}
+          {{form.daysToPredict}}
+        </div>
+      </fieldset>
+      <div class="form-group">
+          {{ form.submit(class="btn btn-outline-info") }}
+      </div>
+    </form>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Predict Stock Price</h1>
+Enter below the stock whose price you'll like to predict.
+<form action="predict.html" method="post">
+  <label for="stockTicker">Stock:</label>
+  <input type="text" align="right" id="stockTicker" name="stockTicker" placeholder="Enter stock ticker, i.e. AAPL"><br>
+  <label for="daysPredicted">Choose no. of days:</label>
+  <select id="daysPredicted">
+    <option value="one">One</option>
+    <option value="two">Two</option>
+    <option value="three">Three</option>
+    <option value="four">Four</option>
+  </select><br>
+  <input class="form-submit-button" type="submit" value="Submit">
+</form>

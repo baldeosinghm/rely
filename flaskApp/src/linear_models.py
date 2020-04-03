@@ -7,7 +7,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn import metrics
 
 # make data frame
-df = pd.read_csv("csv/apple.csv", sep='\s*,\s*', header=0, encoding='ascii', engine='python')
+df = pd.read_csv("../csv/apple.csv", sep='\s*,\s*', header=0, encoding='ascii', engine='python')
 # Visualize results
 # def show_simple_plot():
 # plot the dataset
