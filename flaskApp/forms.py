@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField
 from wtforms.validators import DataRequired, Length, Email, EqualTo
 
 
@@ -22,6 +22,6 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Login')
 
 class PredictForm(FlaskForm):
-    stockTicker = StringField('Stock Ticker', validators=[DataRequired(), Length(min=2, max=6)])
+    stockTicker = SelectField('Stock Ticker', choices=[("SNAP", "Snapchat"), ("TWTR", "Twitter"), ("VZ", "Verizon"), ("DB", "Deutsche Bank"), ("XOM", "Exxon Mobil")])
     daysToPredict = StringField('Days', validators=[DataRequired(), Length(min=1)])
     submit = SubmitField("Submit")
