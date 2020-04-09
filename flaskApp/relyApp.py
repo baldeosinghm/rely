@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, flash, redirect, request
 from forms import RegistrationForm, LoginForm, PredictForm
-from src.generate_csv import get_endpoint
+from src.generate_csv import stock_csv
+from src.linear_regression import predictPrice
 import sys
 
 app = Flask(__name__)
@@ -20,8 +21,14 @@ def about():
 def predict():
     form = PredictForm()
     if form.validate_on_submit():
-        data=request.form["stockTicker"]
-        get_endpoint(data)
+        stock=request.form["stockTicker"]
+        days=int(request.form["daysToPredict"])
+        stock_csv(stock)
+        prediction=predictPrice(stock, days)
+        if (days==1):
+            flash(str(stock) + "'s High in " + str(days) + " day will be: " + str(prediction) + ".")
+        else:
+            flash(str(stock) + "'s High in " + str(days) + " edays will be: " + str(prediction) + ".")
     return render_template('predict.html', title='Predict', form=form)
 
 @app.route("/register", methods=['GET', 'POST'])
