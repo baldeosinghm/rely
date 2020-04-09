@@ -2,15 +2,16 @@
 import csv, json, sys
 import requests
 
+
 def stock_csv(stock):
     try:
-        endpoint = requests.get("https://api.worldtradingdata.com/api/v1/history?symbol=" + stock + "&stock_exchange=NYSE&sort=newest&api_token=xEA1Hk9dOQ6oesDeipKYWUtefQirEbI1KZnz8RUSNKnXWp5qcF9zqOp7qwvr")
+        endpoint = requests.get("https://www.quandl.com/api/v3/datasets/WIKI/" + stock + "/data.json?api_key=2KD9BWkNZjPX8SWq7kF7")
+        print(endpoint)
         wtd_json = endpoint.json()
         test_file = open("csv/" + stock + ".csv", 'w+')
-        test_file.write("Date, Open, Close, High, Low \n")
-        for date in wtd_json['history']:
-            day = wtd_json['history'][date]
-            test_file.write(date + ", " + day['open'] + ", " + day['close'] + ", " + day['high'] + ", " + day['low'] + "\n")
+        test_file.write("Date, Open, High, Low\n")
+        for d in wtd_json['dataset_data']['data']:
+            test_file.write(f'{d[0]}, {d[1]}, {d[2]}, {d[3]}\n')
         test_file.close()
         return False
     except Exception as e:

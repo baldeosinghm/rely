@@ -22,6 +22,6 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Login')
 
 class PredictForm(FlaskForm):
-    stockTicker = SelectField('Stock Ticker', choices=[("Snap", "Snapchat"), ("TWTR", "Twitter"), ("VZ", "Verizon"), ("DB", "Deutsche Bank"), ("XOM", "Exxon Mobil")])
-    daysToPredict = SelectField('Days', choices=[("1", "1"), ("2", "2"), ("3", "3"), ("4", "4")])
+    stockTicker = SelectField('Stock Ticker', choices=[("TWTR", "Twitter"), ("VZ", "Verizon"), ("FB", "Facebook"), ("TSLA", "Tesla"), ("GOOGL", "Google")])
+    daysToPredict = SelectField('Days', choices=[("1", "1"), ("2", "2"), ("3", "3"), ("4", "4"), ("5", "5")])
     submit = SubmitField("Submit")

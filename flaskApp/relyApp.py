@@ -26,9 +26,9 @@ def predict():
         stock_csv(stock)
         prediction=predictPrice(stock, days)
         if (days==1):
-            flash(str(stock) + "'s High in " + str(days) + " day will be: " + str(prediction) + ".")
+            flash(str(stock) + "'s High in " + str(days) + " day will be: $" + str(prediction[0]) + ".")
         else:
-            flash(str(stock) + "'s High in " + str(days) + " edays will be: " + str(prediction) + ".")
+            flash(str(stock) + "'s High in " + str(days) + " days will be: $" + str(prediction[0]) + ".")
     return render_template('predict.html', title='Predict', form=form)
 
 @app.route("/register", methods=['GET', 'POST'])
