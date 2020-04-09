@@ -1,8 +1,6 @@
 import pandas as pd
 import numpy as np
 import matplotlib
-import time
-from datetime import datetime
 matplotlib.use("TKagg")
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split, cross_val_score, cross_val_predict
@@ -21,13 +19,11 @@ def predictPrice(stock, days):
     # Here we train our algorithm, "regressor"
     regressor = LinearRegression()
     regressor.fit(X_train, y_train)
-    # Forecast out 30 days
-    # Shift data frame columns down 30
+    # Forecast out inputted # of days
+    # Shift data frame columns up to predict "days" amount into the future
     df['Prediction'] = df['High'].shift(days)
-    # Set X_forecast equal to the last 30 rows of the original data set from Close column
+    # Drop unessential columns and remove "days" amount of bottom rows
     y_forecast = df.drop(['Date', 'Open', 'High', 'Low'],1)[days:]
     prediction = regressor.predict(y_forecast)
-    regressor_confidence = regressor.score(X_test, y_test)
-    kFold_prediction = cross_val_predict(regressor, X, y, cv=3)
-    kFold_score = cross_val_score(regressor, X, y, cv=3)
+    # regressor_confidence = regressor.score(X_test, y_test)
     return prediction[days]
