@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="content-section">
+    <form method="POST" action="">
+      <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Naive Bayes</legend>
+        <div class="form-group">
+          {{form.csrf_token}}
+          {{form.nBstockTicker.label}}
+          {{form.nBstockTicker}}
+          {{form.nBdaysToPredict.label}}
+          {{form.nBdaysToPredict}}
+        </div>
+      </fieldset>
+      <div class="form-group">
+          {{ form.submit(class="btn btn-outline-info") }}
+      </div>
+    </form>
+{% endblock content %}
