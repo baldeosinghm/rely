@@ -14,8 +14,8 @@ def vectorPredictPrice(stock, days):
     # Stock's High is the dependent variable, what we want to predict
     X = df['Low'].values.reshape(-1,1)
     y = df['High'].values.reshape(-1,1)
-    # Here we split the data: 70% for training, 30% for testing in test_size
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+    # Here we split the data: 80% for training, 20% for testing in test_size
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
     # Instantiate Support Vector Machine (SVR) from SVR class
     # Because we are dealing with a nonlinear relationship, we will specify
     # the kernel function as rbf, for exponential.  The associated keyword

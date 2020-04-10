@@ -14,8 +14,8 @@ def predictNaivePrice(stock, days):
     # Stock's High is the dependent variable, what we want to predict
     X = df['Low'].values.reshape(-1,1)
     y = df['High'].values.reshape(-1,1)
-    # Here we split the data: 70% for training, 30% for testing in test_size
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
+    # Here we split the data: 80% for training, 20% for testing in test_size
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=0)
     # Create instance of sklearn's Gaussian Naive Bayes class
     gnb = GaussianNB()
     # Train Naive-Bayes algorithm by fitting model
