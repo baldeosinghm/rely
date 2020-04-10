@@ -23,6 +23,6 @@ def cvPredictPrice(stock, days):
     # perform a lerning algorithm over three subsets of the original
     # dataset; cv is the # of partitioned subsets
     # The prediction functions trains on the X (predictors) and y (outcome)
-    kFold_prediction = cross_val_predict(regressor, X, y, cv=3)
+    kFold_prediction = cross_val_predict(regressor, X, y, cv=5)
     # Return forecast from inputted # of days
     return kFold_prediction[days]
