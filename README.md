@@ -13,7 +13,7 @@ machine learning algorithms:
 - Support Vector Regression Algorithm
 - Naive Bayes Classification Algorithm
 
-You can access the app here: http://45.56.102.63/
+This application has been deployed so it can be accessed here: http://45.56.102.63/
 
 ## Usage Instructions
 
@@ -25,18 +25,26 @@ terminal:
 git clone https://github.com/baldeosinghm/rely.git
 ```
 
+This tool uses Quandl's Time-Series API to retrieve historical stock prices.  Currently, my API token is being used.  However, you should replace it with one acquired via Quandl if you are to make any changes or avoid API call restrictions.  This can be done by navigating to the `generate_csv.py` module in the src folder and replacing the portion below entitled `api_key` with yours.
+
+```
+endpoint = requests.get("https://www.quandl.com/api/v3/datasets/WIKI/" + stock + "/data.json?api_key=api_key")
+```
+
+If you would like to manipulate a different dataset refer to Quandl's API documentation [here](https://docs.quandl.com).
+
 ### Install Dependencies
 
 Rely is only operational when certain dependencies are installed.  It is highly
-recommended that you to create a virtual environment before any change to code.
-Once inside the Rely repository, install `pipenv`, a dependency manager for Python projects.
+recommended that you create a virtual environment before any changes to the code
+are made. Once inside the repository, install `pipenv`, a dependency manager for Python projects.
 
-Use pip to install pipenv:
+Install pipenv in the terminal:
 ```
 pip install --user pipenv
 ```
 
-Navigate to the directory `rely/flaskapp/` and start virtual environment:
+Navigate to `rely/flaskapp/` and start virtual environment:
 ```
 pipenv shell
 ```
@@ -56,3 +64,7 @@ python relyApp.py
 ```
 
 Paste **localhost:5000** into browser to run application.
+
+## Evaluation
+
+To evaluate the quality and performance of the algorithms you can refer to the evaluation folder.  Simply paste any of the given functions at the bottom of a module's function for any of the four algorithms.  The output will be printed in the terminal while the local server runs.  An example is provided in the evaluation folder.
