@@ -17,15 +17,15 @@ This application has been deployed so it can be accessed here: http://45.56.102.
 
 ## Usage Instructions
 
-Rely is an open source project.  If you are a interested in using the software
-for your own development, clone it from above with HTTPS or paste below into your
+Rely is an open source project.  If you are interested in using the software
+for your own development, clone it from above with **HTTPS** or paste below into your
 terminal:
 
 ```
 git clone https://github.com/baldeosinghm/rely.git
 ```
 
-This tool uses Quandl's Time-Series API to retrieve historical stock prices.  Currently, my API token is being used.  However, you should replace it with one acquired via Quandl if you are to make any changes or avoid API call restrictions.  This can be done by navigating to the `generate_csv.py` module in the src folder and replacing the portion below entitled `API_token` with yours.
+This tool uses **Quandl's Time-Series API** to retrieve historical stock prices.  Currently, my API token is being used.  However, you should replace it with one acquired via Quandl if you are to make any changes or avoid API call restrictions.  This can be done by navigating to the `generate_csv.py` module in the src folder and replacing the portion below entitled `API_token` with yours.
 
 ```
 endpoint = requests.get("https://www.quandl.com/api/v3/datasets/WIKI/" + stock + "/data.json?api_key=API_token")
@@ -57,7 +57,7 @@ pipenv install --dev
 
 ### Run Application
 
-Navigate to the inside of the /flaskapp directory and run:
+Navigate to the inside of `/flaskapp` and run:
 
 ```
 python relyApp.py
