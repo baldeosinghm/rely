@@ -25,10 +25,10 @@ terminal:
 git clone https://github.com/baldeosinghm/rely.git
 ```
 
-This tool uses Quandl's Time-Series API to retrieve historical stock prices.  Currently, my API token is being used.  However, you should replace it with one acquired via Quandl if you are to make any changes or avoid API call restrictions.  This can be done by navigating to the `generate_csv.py` module in the src folder and replacing the portion below entitled `api_key` with yours.
+This tool uses Quandl's Time-Series API to retrieve historical stock prices.  Currently, my API token is being used.  However, you should replace it with one acquired via Quandl if you are to make any changes or avoid API call restrictions.  This can be done by navigating to the `generate_csv.py` module in the src folder and replacing the portion below entitled `API_token` with yours.
 
 ```
-endpoint = requests.get("https://www.quandl.com/api/v3/datasets/WIKI/" + stock + "/data.json?api_key=api_key")
+endpoint = requests.get("https://www.quandl.com/api/v3/datasets/WIKI/" + stock + "/data.json?api_key=API_token")
 ```
 
 If you would like to manipulate a different dataset refer to Quandl's API documentation [here](https://docs.quandl.com).
