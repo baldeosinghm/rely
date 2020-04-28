@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
-import matplotlib
-matplotlib.use("TKagg")
-import matplotlib.pyplot as plt
+# import matplotlib
+# matplotlib.use("TKagg")
+# import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split, cross_val_score, cross_val_predict
 from sklearn.linear_model import LinearRegression
 

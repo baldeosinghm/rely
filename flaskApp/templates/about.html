@@ -1,4 +1,29 @@
 {% extends "layout.html" %}
 {% block content %}
     <h1>About Page</h1>
+
+    Rely is powered by machine learning (ML) algorithms.  All four of those algorithms are listed below.
+
+    <h2>Linear Regression</h2>
+
+    Linear regression is a statistical modeling approach to analyzing data with a linear relationship.
+    This particular algorithm calculates predictions with the belief that a linear relationship exists
+    between the previous highs and lows of a stock's price on a given day.
+
+    <h2>K-Fold Cross Validation</h2>
+
+    This algorithm's prediction is designed to give a more accurate stock price prediction than linear regression.
+    By partitioning a dataset, the algorithm looks for patterns among the data to better forecast a future stock price.
+
+    <h2>Support Vector Machine</h2>
+
+    Support Vector Machines are a category of classification and regression techniques.  This means they can either
+    detect a relationship between two variables or do this and identify patterns in a dataset without partitioning it.
+    If you are interested in seeing the future price for a stock with highly predictable movement, then this is a fitting choice.
+
+    <h2>Naive Bayes Classification</h2>
+
+    Naive Bayes is a group of probalistic classifiers that not only identifies patterns in a dataset, but also assumes
+    that their is high conditional independence between the variables.  In this case, the stock indicators high and low.
+
 {% endblock content %}

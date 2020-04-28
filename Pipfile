@@ -6,8 +6,14 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-worldtradingdata = "==0.1.1"
 requests = "*"
+pandas = "*"
+numpy = "*"
+matplotlib = "*"
+sklearn = "*"
+flask = "*"
+flask-wtf = "*"
+wtforms = "*"
 
 [requires]
 python_version = "3.6"

@@ -73,6 +73,7 @@ plt.plot(X_test, y_pred, color='red', linewidth=2)
 plt.show()   ## --> Show the graph (this will indicate if our algorithm, not necessarily if it's accurate)
 
 # Evaluate the performance of the regression algorithm by using the following three metrics
+print('R^2:', metrics.score(y_test, y_pred))
 print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
 print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))
 print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))

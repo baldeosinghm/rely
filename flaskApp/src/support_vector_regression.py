@@ -1,10 +1,10 @@
-import matplotlib
-import matplotlib.pyplot as plt
+# import matplotlib
+# import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.svm import SVR
 from sklearn.model_selection import train_test_split
-matplotlib.use("TKagg")
+# matplotlib.use("TKagg")
 
 def vectorPredictPrice(stock, days):
     # make data frame
