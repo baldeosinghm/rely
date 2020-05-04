@@ -67,4 +67,4 @@ Paste **localhost:5000** into browser to run application.
 
 ## Evaluation
 
-To evaluate the quality and performance of the algorithms you can refer to the evaluation folder.  Simply paste any of the given functions at the bottom of a module's function for any of the four algorithms.  The output will be printed in the terminal while the local server runs.  An example is provided in the evaluation folder.
+To evaluate the quality and performance of the algorithms you can refer to the evaluation folder.  Simply paste any of the given functions at the bottom of it's respective algorithm's module.  The output will be printed in the terminal while the local server runs.  An example is provided in the evaluation folder.
