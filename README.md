@@ -1,7 +1,7 @@
 # Rely
 [Rely](http://45.56.102.63/ "Rely's Homepage"): A web app you can rely on to forecast today's stock market.
 
-## Introduction?
+## Introduction
 
 Rely is a Flask web application that implements four machine learning algorithm
 to predict stock prices. Namely, those stocks are Twitter, Verizon, Facebook,
