@@ -1,5 +1,5 @@
 # Rely
-For my senior projet, I created [Rely](http://45.56.102.63/ "Rely's Homepage"): - a web app you can rely on to forecast today's stock market.
+For my senior projet, I created [Rely](http://45.56.102.63/ "Rely's Homepage") - a web app you can rely on to forecast today's stock market.
 
 ## Introduction
 
