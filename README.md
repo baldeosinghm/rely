@@ -1,5 +1,5 @@
 # Rely
-[Rely](http://45.56.102.63/ "Rely's Homepage"): A web app you can rely on to forecast today's stock market.
+[Rely](http://45.56.102.63/ "Rely's Homepage"): For my senior projet, I created Rely - a web app you can rely on to forecast today's stock market.
 
 ## Introduction
 
